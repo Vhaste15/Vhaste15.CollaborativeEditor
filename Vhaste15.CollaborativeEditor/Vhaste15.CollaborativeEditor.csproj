@@ -4,13 +4,16 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-	  <Version>1.0.0</Version>
+	  <Version>1.0.1</Version>
 	  <Description>Motor de edición colaborativa en tiempo real (SignalR + Yjs) con persistencia opcional.</Description>
 	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
 	  <DocumentationFile>$(OutputPath)$(AssemblyName).xml</DocumentationFile>
 	  <PackageReadmeFile>README.md</PackageReadmeFile>
 	  <authors>Mauricio Agosta</authors>
+	  <RepositoryUrl>https://github.com/Vhaste15/Vhaste15.CollaborativeEditor</RepositoryUrl>
+	  <RepositoryType>git</RepositoryType>
+	  <PackageProjectUrl>https://github.com/Vhaste15/Vhaste15.CollaborativeEditor</PackageProjectUrl>
   </PropertyGroup>
 
 	<PropertyGroup>
