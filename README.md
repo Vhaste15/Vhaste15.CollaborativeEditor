@@ -4,6 +4,7 @@
 [![.NET](https://img.shields.io/badge/.NET-10.0-512BD4?style=flat-square&logo=dotnet)](https://dotnet.microsoft.com/)
 [![Language](https://img.shields.io/badge/language-C%23-239120?style=flat-square&logo=csharp)](https://learn.microsoft.com/en-us/dotnet/csharp/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
+[![GitHub package.json version](https://shields.io)](https://github.com/MRydex/angular-mrydex-editor)
 
 Real-time collaborative document editing engine for **ASP.NET Core (.NET 10)** powered by **SignalR** and **Yjs (CRDT)**. Enables Google Docs-style multi-user editing, live cursor presence, seed locking, and optional database persistence.
 
