@@ -114,13 +114,13 @@ app.UseAuthorization();
 
 // 4. Map controllers (exposes POST /api/collaboration/join) and the anonymous SignalR Hub
 app.MapControllers();
-app.MapCollaborativeEditorHub("/api/hubs/editor");
+app.MapCollaborativeEditorHub("/hubs/editor");
 
 app.Run();
 ```
 
 > [!IMPORTANT]
-> If your application sits behind a reverse proxy (YARP, Nginx, IIS ARR), ensure WebSocket upgrades are enabled and the Hub route (`/api/hubs/editor/{**catch-all}`) has higher routing priority than any SPA fallback.
+> If your application sits behind a reverse proxy (YARP, Nginx, IIS ARR), ensure WebSocket upgrades are enabled and the Hub route (`/hubs/editor/{**catch-all}`) has higher routing priority than any SPA fallback.
 
 ---
 
@@ -246,7 +246,7 @@ builder.Services.AddCollaborativeEditor(options =>
 
 ## Hub & HTTP Contract
 
-1. **Connect WebSocket:** The client connects anonymously to `/api/hubs/editor` using WebSockets (`skipNegotiation: true`).
+1. **Connect WebSocket:** The client connects anonymously to `/hubs/editor` using WebSockets (`skipNegotiation: true`).
 2. **HTTP Join (`POST /api/collaboration/join`):** The client sends `{ connectionId, documentId, clientId, initialHtml? }` with its standard `Authorization: Bearer <jwt>` header and receives `JoinResult`.
 3. **Real-Time Sync:**
    - **Client $\rightarrow$ Server:** `SendUpdate(byte[])`, `SendAwareness(byte[])`, `Compact(byte[])`, `SaveHtml(string)`.
