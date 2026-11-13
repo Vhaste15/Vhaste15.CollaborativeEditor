@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Vhaste15.CollaborativeEditor</name>
+    </assembly>
+    <members>
+        <member name="T:Vhaste15.CollaborativeEditor.Abstractions.ICollaborativePermissionResolver">
+            <summary>
+            Permite personalizar cómo se resuelven los permisos.
+            Si no se registra, la librería incluye una implementación por defecto basada en los claims del JWT.
+            </summary>
+        </member>
+        <member name="T:Vhaste15.CollaborativeEditor.Abstractions.ICollaborativePersistence">
+            <summary>
+            Contrato opcional para que la aplicación consumidora persista los deltas de Yjs y el HTML en su BD.
+            Si no se registra en el contenedor DI, el editor colaborativo funcionará 100% en memoria.
+            </summary>
+        </member>
+        <member name="M:Vhaste15.CollaborativeEditor.Extensions.CollaborativeEditorExtensions.AddCollaborativeEditor(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Vhaste15.CollaborativeEditor.Abstractions.CollaborationOptions})">
+            <summary>
+            Registra el motor de edición colaborativa en tiempo real (funciona en memoria por defecto).
+            </summary>
+        </member>
+        <member name="M:Vhaste15.CollaborativeEditor.Extensions.CollaborativeEditorExtensions.AddCollaborativePersistence``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Permite a la aplicación consumidora registrar su propia persistencia en base de datos (Opcional).
+            </summary>
+        </member>
+        <member name="M:Vhaste15.CollaborativeEditor.Extensions.CollaborativeEditorExtensions.MapCollaborativeEditorHub(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,System.String)">
+            <summary>
+            Mapea el Hub anónimo de edición colaborativa.
+            </summary>
+        </member>
+        <member name="M:Vhaste15.CollaborativeEditor.Internal.CollaborationRooms.KillAllConnections">
+            <summary>
+            Permite desconectar todos los WebSockets activos si se deshabilita la colaboración en caliente.[cite: 5]
+            </summary>
+        </member>
+    </members>
+</doc>
